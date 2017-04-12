@@ -30,11 +30,15 @@
 <script type="text/javascript" src="js/template.js"></script>
 		<!-- Backstretch javascript -->
 	<script type="text/javascript" src="js/custom.js"></script>
-<script src="js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+window.location = "index2.html"; //可以换成http地址
+}
+</script>
 </head>
 
 <body class="banner-image">
-	<div style="width:100%; height:100%;" id="playVideo">
+	<div style="width:100%; height:100%;" >
 	
   <div style="text-align:center;margin:0 auto;">
     <img src="img/bg.png" style="width:400px;height:200px;">
@@ -66,4 +70,17 @@
 		
 
 </body>
+<script>
+	$(window).resize(function(){
+		if($(window).width()<$(window).height()){
+			$(".position").css("width","2.1em");
+			$(".digit").css("width","2em");
+			$(".countdownHolder").css("width","900px");
+		}else{
+			$(".position").css("width","1.05em");
+			$(".digit").css("width","1em");
+			$(".countdownHolder").css("width","450px");
+		}
+	});
+</script>
 </html>

@@ -31,6 +31,7 @@
 		<!-- Backstretch javascript -->
 	<script type="text/javascript" src="js/custom.js"></script>
 <script src="js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 
 <body class="banner-image">
@@ -63,7 +64,19 @@
     </div><!--/container-->
 </div>
 <!-- start of the javascript code that handles the countdown -->
-		
+		<script>
+	$(window).resize(function(){
+		if($(window).width()<$(window).height()){
+			$(".position").css("width","2.1em");
+			$(".digit").css("width","2em");
+			$(".countdownHolder").css("width","900px");
+		}else{
+			$(".position").css("width","1.05em");
+			$(".digit").css("width","1em");
+			$(".countdownHolder").css("width","450px");
+		}
+	});
+</script>
 
 </body>
 </html>
